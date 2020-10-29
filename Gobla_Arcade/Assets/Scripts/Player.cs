@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
@@ -10,7 +12,7 @@ public class Player : MonoBehaviour
     public int lives = 3;
     
     public bool isGrounded = false;
-    public bool isMooving = false;
+    public bool isMoving = false;
 
     private const float Speed = 1.5f;
     private const float JumpForce = 3f;
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
 
     public LayerMask groundLayer;
     public float radius = 0.3f;
-    public float groundRayDist = 0.5f;
+    private float groundRayDist = 0.1f;
 
     private Rigidbody2D _rb;
     private Animator _anim;
@@ -49,14 +51,22 @@ public class Player : MonoBehaviour
     {
         movHor = Input.GetAxisRaw("Horizontal");
 
-        isMooving = (movHor != 0f);
+        isMoving = (movHor != 0f);
 
-        isGrounded = Physics2D.CircleCast(transform.position, radius, Vector3.down, groundRayDist, groundLayer);
+        isGrounded = Physics2D.CircleCast(transform.position, radius, Vector3.down, groundRayDist, groundLayer); 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+        }      
+        
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Shot();
         }
+        
+        _anim.SetBool("isMoving",isMoving);
+        _anim.SetBool("isGrounded",isGrounded);
         
         Flip(movHor);
     }
@@ -71,6 +81,11 @@ public class Player : MonoBehaviour
         if (!isGrounded) return;
         
         _rb.velocity = Vector2.up * JumpForce;
+    }
+
+    private void Shot()
+    {
+        
     }
 
     private void Flip(float xValue)
