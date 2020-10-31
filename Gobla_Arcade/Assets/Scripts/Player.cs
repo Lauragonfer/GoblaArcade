@@ -8,7 +8,7 @@ using UnityEngine.Video;
 public class Player : MonoBehaviour
 {
     public static Player Obj;
-    
+
     public int lives = 3;
     
     public bool isGrounded = false;
@@ -58,13 +58,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
-        }      
-        
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Shot();
         }
-        
+
         _anim.SetBool("isMoving",isMoving);
         _anim.SetBool("isGrounded",isGrounded);
         
@@ -75,17 +70,12 @@ public class Player : MonoBehaviour
     {
         _rb.velocity = new Vector2(movHor *Speed, _rb.velocity.y);
     }
-
+    
     private void Jump()
     {
         if (!isGrounded) return;
         
         _rb.velocity = Vector2.up * JumpForce;
-    }
-
-    private void Shot()
-    {
-        
     }
 
     private void Flip(float xValue)
@@ -106,6 +96,20 @@ public class Player : MonoBehaviour
 
         {
             
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy") )
+        {
+            lives--;
+            if (lives <= 0)
+            {
+                Debug.Log("GAME OVER");
+                //GAME OVER
+            }
+
         }
     }
 }

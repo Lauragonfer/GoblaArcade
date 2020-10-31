@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject ball;
 
-    private int enemyLive = 3;
+    private int _enemyLive = 3;
     public float speed = 3f;
     public float movHor = 1f;
 
@@ -65,18 +65,18 @@ public class Enemy : MonoBehaviour
         {
             getKilled();
         }
-        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.CompareTag("bullet"))
         {
-            enemyLive--;
-            Debug.Log("EnemyLive"+enemyLive);
-            if (enemyLive <= 0)
+            _enemyLive--;
+            if (_enemyLive <= 0)
             {
                 TransformToBall();
             }
         }
-        
-        
     }
 
     private void FixedUpdate()
