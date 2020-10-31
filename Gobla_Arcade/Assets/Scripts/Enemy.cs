@@ -6,6 +6,9 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D _rb;
 
+    public GameObject ball;
+
+    private int enemyLive = 3;
     public float speed = 3f;
     public float movHor = 1f;
 
@@ -49,14 +52,30 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("wall") )
         {
-            Debug.Log("Chocan ENEMIGOS");
             movHor = movHor * -1;
             Flip(movHor);
         }
+        
+        if (other.gameObject.CompareTag("ball") )
+        {
+            getKilled();
+        }
+        
+        if (other.gameObject.CompareTag("bullet"))
+        {
+            enemyLive--;
+            Debug.Log("EnemyLive"+enemyLive);
+            if (enemyLive <= 0)
+            {
+                TransformToBall();
+            }
+        }
+        
         
     }
 
@@ -65,12 +84,20 @@ public class Enemy : MonoBehaviour
        _rb.velocity = new Vector2(movHor * speed, _rb.velocity.y); ;
     }
 
-    private void getKilled()
-    {
-        gameObject.SetActive(false);
+    private void TransformToBall()
+    { 
+        Instantiate(ball, transform.position, transform.rotation);
+       this.gameObject.SetActive(false);
+      
+
     }
 
-    
+    private void getKilled()
+    {
+        //ganar puntos
+        Destroy(this.gameObject);
+    }
+
     private void Flip(float xValue)
     {
         Vector3 theScale = transform.localScale;
@@ -86,9 +113,6 @@ public class Enemy : MonoBehaviour
         }
 
         transform.localScale = theScale;
-
-        {
-            
-        }
+        
     }
 }

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public bool isMoving = false;
 
     private const float Speed = 1.5f;
-    private const float JumpForce = 3f;
+    private const float JumpForce = 5f;
     private float movHor;
 
     public float immuneTimeCnt = 0f;

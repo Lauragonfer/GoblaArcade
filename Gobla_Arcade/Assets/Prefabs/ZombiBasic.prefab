@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa696788bcb2fb24da71572773443de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 8238056026461694724, guid: 3bd7f4c6e2ea0d849bee12b8fc8a2a13, type: 3}
   speed: 1
   movHor: 1
   isGroundFloor: 1
