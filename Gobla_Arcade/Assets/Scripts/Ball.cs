@@ -8,7 +8,9 @@ public class Ball : MonoBehaviour
 
     public GameObject enemy;
 
-
+    private float _startingTime;
+    public float livingTime = 6f;
+    
     public float speed = 3f;
     public float movHor = 1f;
     
@@ -17,6 +19,9 @@ public class Ball : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _startingTime = Time.time;
+		
+        Destroy(gameObject, livingTime);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
