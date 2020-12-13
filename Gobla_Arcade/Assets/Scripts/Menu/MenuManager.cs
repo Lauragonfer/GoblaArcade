@@ -7,7 +7,10 @@ public class MenuManager : MonoBehaviour
 {
     public Canvas logoCanvas, menuCanvas, helpCanvas;
 
-    public float fallDelay = 3f;
+    public float fallDelay = 2f;
+
+    private const int Menu = 0;
+    private const int Level01 = 4;
 
     private void Start()
     {
@@ -20,7 +23,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("World_01_1");
+        SceneManager.LoadScene(Level01);
 
     }
 
@@ -31,8 +34,14 @@ public class MenuManager : MonoBehaviour
 
     public void BackMenu()
     {
-        QuitLogo();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(Menu);
+    }
+
+    public void BackMenuInHelpMenu()
+    {
+        logoCanvas.enabled = false;
+        menuCanvas.enabled = true;
+        helpCanvas.enabled = false;
     }
 
     public void HelpGame()

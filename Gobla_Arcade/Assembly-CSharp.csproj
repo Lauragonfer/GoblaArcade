@@ -58,12 +58,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Ball.cs" />
-     <Compile Include="Assets\Scripts\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Managers\TimerLevel.cs" />
+     <Compile Include="Assets\Scripts\Managers\countsEnemiesDeath.cs" />
+     <Compile Include="Assets\Scripts\Menu\GameOverManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\MapManager.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Menu\WinManager.cs" />
+     <Compile Include="Assets\Scripts\Player\Ball.cs" />
+     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Player\Health.cs" />
+     <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
+     <Compile Include="Assets\Scripts\enemies\Enemy.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

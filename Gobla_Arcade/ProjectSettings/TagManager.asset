@@ -8,6 +8,7 @@ TagManager:
   - wall
   - ball
   - bullet
+  - Level
   layers:
   - Default
   - TransparentFX
