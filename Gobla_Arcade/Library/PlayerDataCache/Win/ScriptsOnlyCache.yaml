@@ -92,7 +92,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -139,7 +139,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,9 +196,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 14118}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -247,7 +247,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -322,9 +322,96 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13830}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 13994}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 14456}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 251
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
+    Assets/Scenes/World_01/World_01_2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 618}
+    - Class: 114
+      Script: {instanceID: 11260}
+    - Class: 114
+      Script: {instanceID: 11282}
+    - Class: 114
+      Script: {instanceID: 11474}
+    - Class: 114
+      Script: {instanceID: 11634}
+    - Class: 114
+      Script: {instanceID: 11858}
+    - Class: 114
+      Script: {instanceID: 12246}
+    - Class: 114
+      Script: {instanceID: 12320}
+    - Class: 114
+      Script: {instanceID: 12462}
+    - Class: 114
+      Script: {instanceID: 12616}
+    - Class: 114
+      Script: {instanceID: 13014}
+    - Class: 114
+      Script: {instanceID: 13028}
+    - Class: 114
+      Script: {instanceID: 13830}
+    - Class: 114
+      Script: {instanceID: 13994}
+    - Class: 114
+      Script: {instanceID: 14456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -852,6 +939,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SavePath
+  - hash:
+      serializedVersion: 2
       Hash: 490a4632ae50fb0b65bba5aaaf7edebd
     assemblyName: Unity.2D.Tilemap.Extras.dll
     namespaceName: 
@@ -982,5 +1075,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu/Map.unity
   - Assets/Scenes/Menu/GameOver.unity
   - Assets/Scenes/Menu/WinMenu.unity
+  - Assets/Scenes/World_01/World_01_2.unity
   - Assets/Scenes/World_01/World_01_1.unity
-  playerPath: C:/Users/ShivaDuna/Documents/tfm exe/Gobla_Arcade.exe
+  playerPath: C:/Users/ShivaDuna/Documents/tfm exe/GoblaArcadeExe/Gobla_Arcade.exe
