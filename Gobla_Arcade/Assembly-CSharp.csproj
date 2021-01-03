@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Managers\SavePath.cs" />
      <Compile Include="Assets\Scripts\Managers\TimerLevel.cs" />
      <Compile Include="Assets\Scripts\Managers\countsEnemiesDeath.cs" />
      <Compile Include="Assets\Scripts\Menu\GameOverManager.cs" />
